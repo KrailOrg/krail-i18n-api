@@ -41,13 +41,13 @@ repositories {
 }
 
 ext.assertjVersion = '3.8.0'
-ext.guiceVersion = '4.0'
+
 
 sourceCompatibility = '1.8'
 
 
 kaytee {
-    baseVersion = "0.10.0.0"
+    baseVersion = "0.10.1.0"
     generateChangeLog=false
 }
 
@@ -57,8 +57,7 @@ bintray {
 
 dependencies {
 
-    compile 'uk.q3c.krail:eventbus-api:0.0.1.0'
-    compile "com.google.inject:guice:$guiceVersion"
+    compile 'uk.q3c.krail:eventbus-api:0.9.0.0.22cb561'
     compile 'uk.q3c.util:q3c-util:0.12.0.0.6b76839'
 
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
