@@ -17,8 +17,7 @@ import com.google.inject.Binder;
 import com.google.inject.Provider;
 import com.google.inject.TypeLiteral;
 import com.google.inject.multibindings.MapBinder;
-import uk.q3c.krail.i18n.I18NKey;
-import uk.q3c.krail.persist.PersistenceInfo;
+import uk.q3c.krail.i18n.I18NPersistenceInfo;
 
 import java.lang.annotation.Annotation;
 
@@ -29,18 +28,22 @@ import java.lang.annotation.Annotation;
  */
 public class I18NPersistenceHelper {
 
+    private static TypeLiteral<I18NPersistenceInfo> persistenceInfoClassLiteral = new TypeLiteral<I18NPersistenceInfo>() {
+    };
+
     public static final String PROVIDE_PATTERN_DAO = "ProvidePatternDao";
 
     private static TypeLiteral<Class<? extends Annotation>> annotationClassLiteral = new TypeLiteral<Class<? extends Annotation>>() {
     };
     private static TypeLiteral<Provider<PatternDao>> patternTypeLiteral = new TypeLiteral<Provider<PatternDao>>() {
     };
-    private static TypeLiteral<PersistenceInfo<I18NKey, ?>> persistenceInfoClassLiteral = new TypeLiteral<PersistenceInfo<I18NKey, ?>>() {
-    };
 
+    private I18NPersistenceHelper() {
+        /// static only
+    }
 
-    public static MapBinder<Class<? extends Annotation>, PersistenceInfo<I18NKey, ?>> patternDaoProviders(Binder binder) {
-        return MapBinder.newMapBinder(binder, annotationClassLiteral, persistenceInfoClassLiteral, PatternDaoProviders.class);
+    public static MapBinder<Class<? extends Annotation>, I18NPersistenceInfo> patternDaoProviders(Binder binder) {
+        return MapBinder.newMapBinder(binder, annotationClassLiteral, persistenceInfoClassLiteral);
     }
 
     public static TypeLiteral<Class<? extends Annotation>> annotationClassLiteral() {
