@@ -1,13 +1,11 @@
-package uk.q3c.krail.i18n
+package uk.q3c.krail.i18n.persist
 
 import com.google.inject.Provider
 import spock.lang.Specification
-import uk.q3c.krail.i18n.persist.I18NPersistDescriptionKey
-import uk.q3c.krail.i18n.persist.I18NPersistLabelKey
+import uk.q3c.krail.i18n.Translate
 import uk.q3c.krail.i18n.test.MockTranslate
 
 import static org.mockito.Mockito.*
-
 /**
  * Created by David Sowerby on 19 Aug 2017
  */

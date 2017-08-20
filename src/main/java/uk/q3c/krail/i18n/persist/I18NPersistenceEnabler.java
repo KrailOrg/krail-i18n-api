@@ -15,7 +15,6 @@ package uk.q3c.krail.i18n.persist;
 
 import com.google.inject.TypeLiteral;
 import uk.q3c.krail.i18n.I18NKey;
-import uk.q3c.krail.i18n.I18NPersistenceInfo;
 import uk.q3c.krail.persist.PersistenceInfo;
 
 import java.lang.annotation.Annotation;

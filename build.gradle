@@ -47,7 +47,7 @@ sourceCompatibility = '1.8'
 
 
 kaytee {
-    baseVersion = "0.12.0.0"
+    baseVersion = "0.13.0.0"
 }
 
 bintray {

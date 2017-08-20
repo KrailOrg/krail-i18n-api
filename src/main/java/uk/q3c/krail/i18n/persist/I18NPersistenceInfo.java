@@ -11,9 +11,11 @@
  *
  */
 
-package uk.q3c.krail.i18n;
+package uk.q3c.krail.i18n.persist;
 
 import com.google.inject.Provider;
+import uk.q3c.krail.i18n.I18NKey;
+import uk.q3c.krail.i18n.Translate;
 import uk.q3c.krail.persist.PersistenceInfo;
 
 /**

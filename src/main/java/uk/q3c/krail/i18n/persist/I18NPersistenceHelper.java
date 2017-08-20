@@ -17,7 +17,6 @@ import com.google.inject.Binder;
 import com.google.inject.Provider;
 import com.google.inject.TypeLiteral;
 import com.google.inject.multibindings.MapBinder;
-import uk.q3c.krail.i18n.I18NPersistenceInfo;
 
 import java.lang.annotation.Annotation;
 
