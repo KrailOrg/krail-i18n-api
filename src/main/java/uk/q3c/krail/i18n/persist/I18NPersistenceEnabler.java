@@ -14,7 +14,6 @@
 package uk.q3c.krail.i18n.persist;
 
 import com.google.inject.TypeLiteral;
-import uk.q3c.krail.i18n.I18NKey;
 import uk.q3c.krail.persist.PersistenceInfo;
 
 import java.lang.annotation.Annotation;
@@ -27,7 +26,7 @@ import java.lang.annotation.Annotation;
  * @param <M> the implementation object, returned for fluency
  *            Created by David Sowerby on 25/06/15.
  */
-public interface I18NPersistenceEnabler<M> extends PersistenceInfo<I18NKey, M> {
+public interface I18NPersistenceEnabler<M> extends PersistenceInfo<M> {
 
     TypeLiteral<Class<? extends Annotation>> annotationClassLiteral = new TypeLiteral<Class<? extends Annotation>>() {
     };

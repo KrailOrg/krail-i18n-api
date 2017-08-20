@@ -47,18 +47,19 @@ sourceCompatibility = '1.8'
 
 
 kaytee {
-    baseVersion = "0.11.0.0"
+    baseVersion = "0.14.0.0"
 }
 
 bintray {
     user = 'dsowerby'
 }
 
+
 dependencies {
 
     compile 'uk.q3c.krail:eventbus-api:0.9.0.0.22cb561'
     compile 'uk.q3c.util:q3c-util:0.12.0.0.6b76839'
-    compile 'uk.q3c.krail:krail-persist-api:0.11.0.0.3b07ca2'
+    compile 'uk.q3c.krail:krail-persist-api:0.12.0.0'
 
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
     testCompile 'org.mockito:mockito-all:1.10.19'

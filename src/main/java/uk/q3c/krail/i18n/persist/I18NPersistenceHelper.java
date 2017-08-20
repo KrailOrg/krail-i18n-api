@@ -17,7 +17,6 @@ import com.google.inject.Binder;
 import com.google.inject.Provider;
 import com.google.inject.TypeLiteral;
 import com.google.inject.multibindings.MapBinder;
-import uk.q3c.krail.i18n.I18NKey;
 import uk.q3c.krail.persist.PersistenceInfo;
 
 import java.lang.annotation.Annotation;
@@ -35,11 +34,11 @@ public class I18NPersistenceHelper {
     };
     private static TypeLiteral<Provider<PatternDao>> patternTypeLiteral = new TypeLiteral<Provider<PatternDao>>() {
     };
-    private static TypeLiteral<PersistenceInfo<I18NKey, ?>> persistenceInfoClassLiteral = new TypeLiteral<PersistenceInfo<I18NKey, ?>>() {
+    private static TypeLiteral<PersistenceInfo<?>> persistenceInfoClassLiteral = new TypeLiteral<PersistenceInfo<?>>() {
     };
 
 
-    public static MapBinder<Class<? extends Annotation>, PersistenceInfo<I18NKey, ?>> patternDaoProviders(Binder binder) {
+    public static MapBinder<Class<? extends Annotation>, PersistenceInfo<?>> patternDaoProviders(Binder binder) {
         return MapBinder.newMapBinder(binder, annotationClassLiteral, persistenceInfoClassLiteral, PatternDaoProviders.class);
     }
 
