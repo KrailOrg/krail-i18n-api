@@ -14,8 +14,7 @@ package uk.q3c.krail.i18n.test;
 
 import com.google.inject.Inject;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
-import net.engio.mbassy.bus.common.PubSubSupport;
-import uk.q3c.krail.eventbus.BusMessage;
+import uk.q3c.krail.eventbus.MessageBus;
 import uk.q3c.krail.i18n.CurrentLocale;
 import uk.q3c.krail.i18n.LocaleChangeBusMessage;
 
@@ -26,7 +25,7 @@ import java.util.Locale;
  * gets used by so many things it makes test setup a pain if the full version is used
  */
 public class MockCurrentLocale implements CurrentLocale {
-    public PubSubSupport<BusMessage> eventBus;
+    public MessageBus eventBus;
     private Locale locale;
 
     @SuppressFBWarnings("PCOA_PARTIALLY_CONSTRUCTED_OBJECT_ACCESS")
@@ -50,7 +49,7 @@ public class MockCurrentLocale implements CurrentLocale {
             this.locale = locale;
             if (fireListeners) {
                 if (eventBus != null) {
-                    eventBus.publish(new LocaleChangeBusMessage(this, locale));
+                    eventBus.publishSync(new LocaleChangeBusMessage(this, locale));
                 }
             }
         }
