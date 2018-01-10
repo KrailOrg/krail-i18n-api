@@ -46,7 +46,7 @@ sourceCompatibility = '1.8'
 
 kaytee {
     version {
-        number = "0.15.2.0"
+        number = "0.15.3.0"
     }
 }
 
@@ -58,7 +58,7 @@ bintray {
 
 dependencies {
 
-    compile 'uk.q3c.krail:eventbus-api:0.10.0.0'
+    compile 'uk.q3c.krail:eventbus-api:0.11.0.0'
     compile 'uk.q3c.util:q3c-util:0.13.1.3'
     compile 'uk.q3c.krail:krail-persist-api:0.13.0.1'
 
