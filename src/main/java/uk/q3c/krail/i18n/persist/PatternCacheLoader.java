@@ -13,6 +13,8 @@
 
 package uk.q3c.krail.i18n.persist;
 
+import java.io.Serializable;
+
 /**
  * Implementations load the I18N pattern cache from potentially multiple sources.  Configuration of the order in which sources are accessed is held in
  * I18NModule and presented to consumers (such as implementations of this interface) via {@link PatternSourceProvider}
@@ -22,7 +24,7 @@ package uk.q3c.krail.i18n.persist;
  * <p>
  * Created by David Sowerby on 08/12/14.
  */
-public interface PatternCacheLoader {
+public interface PatternCacheLoader extends Serializable {
 
 
 }
