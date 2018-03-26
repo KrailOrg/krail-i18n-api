@@ -15,6 +15,7 @@ package uk.q3c.krail.i18n.persist;
 
 import uk.q3c.krail.i18n.I18NKey;
 
+import java.io.Serializable;
 import java.lang.annotation.Annotation;
 import java.util.Locale;
 
@@ -23,7 +24,7 @@ import java.util.Locale;
  *
  * @param <C> the cache type in use
  */
-public interface PatternSource<C extends Object> {
+public interface PatternSource<C extends Object> extends Serializable {
 
     /**
      * Retrieve an I18N pattern to match the key and locale given
