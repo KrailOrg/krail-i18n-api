@@ -13,12 +13,14 @@
 
 package uk.q3c.krail.i18n;
 
+import java.io.Serializable;
+
 /**
  * A common interface for items which need translated name and description
  * <p>
  * Created by David Sowerby on 08 Feb 2016
  */
-public interface NamedAndDescribed {
+public interface NamedAndDescribed extends Serializable {
 
     I18NKey getNameKey();
 

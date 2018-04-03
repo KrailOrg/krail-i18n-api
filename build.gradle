@@ -12,7 +12,7 @@
  */
 buildscript {
     ext.kotlin_version = '1.2.31'
-    ext.kaytee_plugin_version = "0.18.10.0"
+    ext.kaytee_plugin_version = "0.20.1.0"
     repositories {
         jcenter()
     }
@@ -60,9 +60,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
-    compile 'uk.q3c.krail:eventbus-api:0.11.0.0'
-    compile 'uk.q3c.util:q3c-util:0.13.2.0'
-    compile 'uk.q3c.krail:krail-persist-api:0.14.0.0'
+    compile 'uk.q3c.krail:eventbus-api:0.12.0.0'
+    compile 'uk.q3c.util:q3c-util:1.1.0.0'
+    compile 'uk.q3c.krail:krail-persist-api:0.15.0.0'
 
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
     testCompile 'org.mockito:mockito-all:1.10.19'

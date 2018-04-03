@@ -6,13 +6,15 @@ package uk.q3c.krail.persist;
 
 import uk.q3c.krail.i18n.I18NKey;
 
+import java.io.Serializable;
+
 /**
  * Provides a common set of persistence information across all type of persistence.  Usually implemented by a persistence-related Guice module or a persistence
  * configuration object
  * <p>
  * Created by David Sowerby on 01/07/15.
  */
-public interface PersistenceInfo<C> {
+public interface PersistenceInfo<C> extends Serializable {
 
 
     C name(I18NKey nameKey);
