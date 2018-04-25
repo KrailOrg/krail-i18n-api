@@ -12,6 +12,7 @@
  */
 package uk.q3c.krail.i18n;
 
+import java.io.Serializable;
 import java.util.Locale;
 
 /**
@@ -24,7 +25,7 @@ import java.util.Locale;
  * @author David Sowerby 3 Mar 2013
  */
 
-public interface CurrentLocale {
+public interface CurrentLocale extends Serializable {
 
 
     /**
