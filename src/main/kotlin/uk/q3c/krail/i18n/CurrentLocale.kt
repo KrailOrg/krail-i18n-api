@@ -10,39 +10,33 @@
  *  * specific language governing permissions and limitations under the License.
  *
  */
-package uk.q3c.krail.i18n;
+package uk.q3c.krail.i18n
 
-import java.io.Serializable;
-import java.util.Locale;
+import java.io.Serializable
+import java.util.*
 
 /**
  * Provides a reference to the currently selected Locale.  It is expected that implementations will generally be scoped appropriately
  * to reflect that the selection of locale is a choice usually available to an individual user.
- * <p>
+ *
+ *
  * Changes to Locale should be published to an event bus with a compatible scope.
- * <p>
+ *
+ *
  *
  * @author David Sowerby 3 Mar 2013
  */
 
-public interface CurrentLocale extends Serializable {
+interface CurrentLocale : Serializable {
 
+    var locale: Locale
 
     /**
      * Sets up the locale from the environment (typically browser locale and user option settings)
      */
-    void readFromEnvironment();
+    fun readFromEnvironment()
 
-    Locale getLocale();
-
-    /**
-     * Equivalent to {@link #setLocale(Locale, boolean)} with fireListeners = true
-     *
-     * @param locale
-     */
-    void setLocale(Locale locale);
-
-    void setLocale(Locale locale, boolean fireListeners);
+    fun setLocale(locale: Locale, fireListeners: Boolean)
 
 
 }

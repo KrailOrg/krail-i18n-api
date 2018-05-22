@@ -46,7 +46,7 @@ sourceCompatibility = '1.8'
 
 kaytee {
     version {
-        number = "0.15.9.0"
+        number = "0.15.10.0"
     }
 }
 
